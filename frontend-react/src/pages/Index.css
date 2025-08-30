@@ -1,0 +1,36 @@
+.index-page {
+  text-align: center;
+  padding-top: 3em;
+}
+.index-hero {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #0002;
+  padding: 2em 1em;
+  margin: 0 auto 2em auto;
+  max-width: 700px;
+}
+.index-hero h1 {
+  color: #2c3e50;
+  margin-bottom: 0.5em;
+}
+.index-actions {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 2em;
+}
+.index-btn {
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 8px;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px #0002;
+}
+.index-btn:hover {
+  background: #219150;
+}

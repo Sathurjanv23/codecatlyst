@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+}
+.app-bg {
+  min-height: 100vh;
+  background: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+  background-size: cover;
+  animation: bgfade 10s infinite alternate;
+}
+@keyframes bgfade {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(0.85); }
+}
+.main-content {
+  padding: 2em 1em;
+  background: rgba(255,255,255,0.85);
+  min-height: 80vh;
+  border-radius: 16px;
+  margin: 2em auto;
+  max-width: 900px;
+  box-shadow: 0 4px 24px #0002;
+}
+.success {
+  color: #27ae60;
+  margin-top: 1em;
+}

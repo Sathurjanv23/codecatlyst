@@ -1,0 +1,35 @@
+.main-footer {
+  background: #1a2233;
+  color: #fff;
+  padding: 1.2em 0 1em 0;
+  border-top: 2px solid #27ae60;
+  text-align: center;
+  margin-top: 2em;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.footer-logo {
+  height: 44px;
+  margin-right: 0.7em;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px #27ae6040;
+  border: 2px solid #27ae60;
+  background: linear-gradient(135deg, #27ae60 40%, #1a2233 100%);
+  animation: logo-bounce 1.2s infinite alternate;
+  transition: transform 0.3s;
+}
+
+.footer-logo:hover {
+  transform: scale(1.08) rotate(-6deg);
+  box-shadow: 0 8px 24px #27ae6060;
+}
+
+@keyframes logo-bounce {
+  0% { transform: translateY(0) scale(1); }
+  60% { transform: translateY(-8px) scale(1.05); }
+  100% { transform: translateY(0) scale(1); }
+}

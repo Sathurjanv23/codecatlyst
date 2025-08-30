@@ -1,0 +1,22 @@
+# Node modules and build output
+node_modules/
+build/
+
+# Environment variables and sensitive files
+.env
+
+# Ballerina build output and logs
+backend-ballerina/target/
+backend-ballerina/Ballerina.log
+backend-ballerina/.env
+
+# System files
+*.log
+.DS_Store
+Thumbs.db
+
+# VSCode settings (optional)
+.vscode/
+
+# Ignore firebase.js if it contains credentials
+frontend-react/src/firebase.js

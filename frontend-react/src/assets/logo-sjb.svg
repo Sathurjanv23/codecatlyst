@@ -1,0 +1,16 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sjb-gradient" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#27ae60"/>
+      <stop offset="0.5" stop-color="#2196f3"/>
+      <stop offset="1" stop-color="#fbc02d"/>
+    </linearGradient>
+    <filter id="sjb-shadow" x="0" y="0" width="200%" height="200%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <circle cx="28" cy="28" r="16" fill="url(#sjb-gradient)"/>
+  <text x="50%" y="56%" text-anchor="middle" dominant-baseline="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff" filter="url(#sjb-shadow)">
+    SJB
+  </text>
+</svg>

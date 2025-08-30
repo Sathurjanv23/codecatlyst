@@ -1,0 +1,75 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a2233;
+  color: #fff;
+  padding: 1.2em 0 1em 0;
+  border-bottom: 2px solid #27ae60;
+}
+.header-logo {
+  height: 56px;
+  margin-right: 1em;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px #27ae6040;
+  border: 3px solid #27ae60;
+  background: linear-gradient(135deg, #27ae60 40%, #1a2233 100%);
+  animation: logo-bounce 1.2s infinite alternate;
+  transition: transform 0.3s;
+}
+
+.header-logo:hover {
+  transform: scale(1.08) rotate(-6deg);
+  box-shadow: 0 8px 24px #27ae6060;
+}
+
+@keyframes logo-bounce {
+  0% { transform: translateY(0) scale(1); }
+  60% { transform: translateY(-8px) scale(1.05); }
+  100% { transform: translateY(0) scale(1); }
+}
+ .header-title {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Horizontal Navbar Styles */
+.navbar-horizontal {
+  width: 100%;
+  background: #23272f;
+  box-shadow: 0 2px 8px #0002;
+  border-radius: 0 0 8px 8px;
+  margin-top: 1em;
+}
+.nav-links-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  list-style: none;
+  margin: 0;
+  padding: 0.5em 0;
+}
+.nav-links-horizontal li {
+  display: inline-block;
+}
+.nav-links-horizontal a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 0.5em 1.2em;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  position: relative;
+  display: inline-block;
+}
+.nav-links-horizontal a.active,
+.nav-links-horizontal a:hover {
+  background: #27ae60;
+  color: #fff;
+  box-shadow: 0 2px 8px #27ae6040;
+  text-shadow: 0 1px 2px #0002;
+}

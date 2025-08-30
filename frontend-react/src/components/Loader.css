@@ -1,0 +1,53 @@
+.loader-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #1a2233;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader-content {
+  text-align: center;
+  color: #fff;
+}
+.loader-logo {
+  height: 72px;
+  margin-bottom: 1em;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px #27ae6040;
+  border: 3px solid #27ae60;
+  background: linear-gradient(135deg, #27ae60 40%, #1a2233 100%);
+  animation: logo-bounce 1.2s infinite alternate;
+  transition: transform 0.3s;
+}
+
+.loader-logo:hover {
+  transform: scale(1.08) rotate(-6deg);
+  box-shadow: 0 8px 24px #27ae6060;
+}
+
+@keyframes logo-bounce {
+  0% { transform: translateY(0) scale(1); }
+  60% { transform: translateY(-8px) scale(1.05); }
+  100% { transform: translateY(0) scale(1); }
+}
+.loader-bar {
+  width: 320px;
+  height: 16px;
+  background: #fff2;
+  border-radius: 8px;
+  margin: 0 auto 1em auto;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #0002;
+}
+.loader-bar-inner {
+  height: 100%;
+  background: linear-gradient(90deg, #27ae60 60%, #219150 100%);
+  border-radius: 8px;
+  transition: width 0.2s;
+}
+.loader-text {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,29 @@
+.view-boarding-page {
+  text-align: center;
+}
+.boarding-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px #0002;
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 700px;
+}
+.boarding-img {
+  width: 220px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #0002;
+}
+.boarding-info {
+  flex: 1;
+  text-align: left;
+}
+.boarding-info h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
