@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase"; // make sure firebase.js is in src
 import "./Register.css";
 import logo from "../assets/logo-sj-combined.svg";
 
 const Register = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState(""); // changed from username
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [error, setError] = useState("");
@@ -12,34 +14,32 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!username || !password || !confirm) {
+
+    if (!email || !password || !confirm) {
       setError("All fields are required.");
       setSuccess("");
       return;
     }
+
     if (password !== confirm) {
       setError("Passwords do not match.");
       setSuccess("");
       return;
     }
+
     setError("");
     setSuccess("");
+
     try {
-      const res = await fetch("http://localhost:8080/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password, email: username + "@example.com" })
-      });
-      const data = await res.json();
-      if (data.status === "success") {
-        setSuccess("Registration successful!");
-        setError("");
-      } else {
-        setError(data.message || "Registration failed.");
-        setSuccess("");
-      }
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      console.log("Registered user:", userCredential.user);
+      setSuccess("Registration successful!");
+      setError("");
+      setEmail("");
+      setPassword("");
+      setConfirm("");
     } catch (err) {
-      setError("Server error. Please try again later.");
+      setError(err.message);
       setSuccess("");
     }
   };
@@ -53,10 +53,10 @@ const Register = () => {
         <h2>Owner Registration</h2>
         <form className="register-form" onSubmit={handleSubmit}>
           <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={e => setUsername(e.target.value)}
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
             required
           />
           <input
