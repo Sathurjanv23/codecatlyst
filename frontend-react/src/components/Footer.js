@@ -1,3 +1,4 @@
+//footer section
 import React from "react";
 import logo from "../assets/logo-sjb.svg";
 import "./Footer.css";
@@ -11,4 +12,4 @@ const Footer = () => (
   </footer>
 );
 
-export default Footer;
+export default Footer ;
