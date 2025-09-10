@@ -8,7 +8,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSent(true);
-    // Here you would send data to your Ballerina backend
+    
   };
 
   return (
